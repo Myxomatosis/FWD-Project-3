@@ -25,7 +25,9 @@ new Vue({
   },
 
   computed: {
-
+    revPosts(){
+      return this.posts.slice().reverse();
+    }
   },
 
   watch: {
