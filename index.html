@@ -21,16 +21,19 @@
       <div class='container'>
         <!-- MESSAGE BOX -->
         <div class='compose box'>
-          <p>Enter your message below:</p>
+          <h2>What's going on?</h2>
           <div class='textboxContainer'>
-            <textarea class='compose textbox' v-model='newPostText'>Your message here...</textarea>
+            <textarea class='compose textbox' v-model='newPostText'></textarea>
           </div>
           <button @click='submitPost()'>Post!</button>
         </div>
         <!-- POSTED MESSAGES -->
         <section class="feed box">
-          <h4>Recent Ski Reports</h4>
+          <h2>Recent Ski Reports</h2>
           <ul class="posts">
+            <li class='post box' v-for='post, i in posts'>
+              <p>{{post}}</p>
+            </li>
             <li class="post box">
               <p>
                 post 1

@@ -6,9 +6,11 @@ h1, h2, h3, h4, h5,
 p {
   font-family: 'Helvetica', Arial, sans-serif;
 }
-li{
-list-style: none;
+
+li {
+  list-style: none;
 }
+
 .container {
   max-width: 960px;
   margin: 0 auto;
@@ -27,4 +29,12 @@ list-style: none;
 
 .textboxContainer {
   text-align: center;
+}
+
+.posts {
+  padding-left: 0;
+}
+.post {
+  max-width: 98%;
+  margin: 0 auto;
 }
