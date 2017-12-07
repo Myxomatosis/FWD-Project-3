@@ -5,7 +5,14 @@ new Vue({
   data: {
     posts: [],
     newPostText: ''
-
+    
+    // object
+    // newPost: {
+    //   content: '',
+    //   replies: [],
+    //   likes: 0,
+    //   date: ''
+    // }
   },
 
   methods: {
