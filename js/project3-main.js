@@ -5,7 +5,7 @@ new Vue({
   data: {
     posts: [],
     newPostText: ''
-    
+
     // object
     // newPost: {
     //   content: '',
