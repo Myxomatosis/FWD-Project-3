@@ -10,6 +10,16 @@ h4, h5, p {
 li {
   list-style: none;
 }
+.center{
+  text-align: center;
+}
+.heading{
+  text-align: center;
+}
+.nudgeright{
+  position: relative;
+  left: 20px;
+}
 
 .container {
   max-width: 960px;
