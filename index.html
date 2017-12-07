@@ -22,7 +22,9 @@
         <!-- MESSAGE BOX -->
         <div class='compose box'>
           <p>Enter your message below:</p>
-          <textarea rows='8' v-model='newPostText'>Your message here...</textarea>
+          <div class='textboxContainer'>
+            <textarea class='compose textbox' v-model='newPostText'>Your message here...</textarea>
+          </div>
           <button @click='submitPost()'>Post!</button>
         </div>
         <!-- POSTED MESSAGES -->

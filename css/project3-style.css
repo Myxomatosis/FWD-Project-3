@@ -17,3 +17,14 @@ list-style: none;
 .box {
   border: 2px solid #eee;
 }
+
+.compose.textbox {
+  width: 98%;
+  height: 6em;
+  /*margin-left: 2%;*/
+  /*margin-right: 2%;*/
+}
+
+.textboxContainer {
+  text-align: center;
+}
