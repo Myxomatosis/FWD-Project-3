@@ -4,9 +4,10 @@ new Vue({
   el: '#app',
   data: {
     posts: [],
-    newPostText: ''
+    newPostText: '',
 
     // object
+
     // newPost: {
     //   content: '',
     //   replies: [],
@@ -16,8 +17,18 @@ new Vue({
   },
 
   methods: {
+
     submitPost: function(){
-      var p = this.newPostText;
+      var p = new Object();
+      p.content = this.newPostText;
+      p.replies = [];
+      p.likes = 0;
+      p.date = new Date();
+
+      // var post = ;
+      // post.content = this.newPostText;
+      // // var p = this.newPostText;
+      // // post.content = p;
       this.posts.push(p);
       this.newPostText = '';
     }

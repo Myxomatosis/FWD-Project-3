@@ -25,16 +25,15 @@
           <div class='textboxContainer'>
             <textarea class='compose textbox' v-model='newPostText' placeholder="Type your post here..."></textarea>
           </div>
-          <button @click='submitPost()' >Post!</button>
+          <button @click='submitPost()'>Post!</button>
         </div>
         <!-- POSTED MESSAGES -->
         <section class="feed box">
           <h2 class="nudgeright">Recent Ski Reports</h2>
           <ul class="posts">
             <li class='post box' v-for='post, i in revPosts'>
-              <p class="nudgeright">{{post}}</p>
+              <p class="nudgeright">{{post.content}}</p>
             </li>
-
           </ul>
         </section>
         <!-- REPLIES -->
