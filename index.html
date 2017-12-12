@@ -24,6 +24,15 @@
           <h2>What's going on?</h2>
           <div class='textboxContainer'>
             <textarea class='compose textbox' v-model='newPostText' placeholder="Type your post here..."></textarea>
+            <div class='tagsArea'>
+              <ul class='tagList'>
+                <li>#breck</li>
+                <li>#abasin</li>
+                <li>#keystone</li>
+                <li>#vail</li>
+                <li>#aspen</li>
+              </ul>
+            </div>
           </div>
           <button @click='submitPost()'>Post!</button>
         </div>
@@ -33,6 +42,9 @@
           <ul class="posts">
             <li class='post box' v-for='post, i in revPosts'>
               <p class="nudgeright">{{post.content}}</p>
+              <div class='thumbs'>
+                
+              </div>
             </li>
           </ul>
         </section>

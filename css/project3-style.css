@@ -48,3 +48,7 @@ li {
   max-width: 98%;
   margin: 0 auto;
 }
+
+.tagList li {
+  display: inline;
+}

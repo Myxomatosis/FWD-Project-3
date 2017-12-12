@@ -22,15 +22,15 @@ new Vue({
       var p = new Object();
       p.content = this.newPostText;
       p.replies = [];
-      p.likes = 0;
+      p.ups = 0;
+      p.downs = 0;
       p.date = new Date();
-
+      this.posts.push(p);
+      this.newPostText = '';
       // var post = ;
       // post.content = this.newPostText;
       // // var p = this.newPostText;
       // // post.content = p;
-      this.posts.push(p);
-      this.newPostText = '';
     }
 
   },
