@@ -35,6 +35,10 @@
           <ul class="posts">
             <li class='post box' v-for='post, i in revPosts'>
               <p class="nudgeright">{{post.content}}</p>
+              <div class='thumbs'>
+                <i class='fa fa-thumbs-o-up' @click='addThumbUp(i)'>{{post.ups}}</i>
+                <i class='fa fa-thumbs-o-down'>{{post.downs}}</i>
+              </div>
             </li>
           </ul>
         </section>

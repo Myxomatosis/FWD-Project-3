@@ -7,7 +7,7 @@ new Vue({
     newPostText: '',
 
     // object
-
+    // newPost
     // newPost: {
     //   content: '',
     //   replies: [],
@@ -31,8 +31,15 @@ new Vue({
       // post.content = this.newPostText;
       // // var p = this.newPostText;
       // // post.content = p;
-    }
+    },
 
+    addThumbUp: function(i){
+      this.posts[i].ups++;
+    },
+
+    addThumbDown: function(i){
+      this.posts[i].downs++;
+    }
   },
 
   computed: {
@@ -42,7 +49,12 @@ new Vue({
   },
 
   watch: {
-
+    posts: {
+      handler: function (val, oldVal) {
+      	console.log('a thing changed')
+      },
+      deep: true
+    }
   },
 
   mounted: function(){
