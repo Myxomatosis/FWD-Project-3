@@ -26,6 +26,7 @@ new Vue({
       p.downs = 0;
       p.date = new Date();
       p.tag = $('input[name="tagSelector"]:checked').val();
+
       if(this.posts.length == 0){
         this.posts.push(p);
       } else {
@@ -40,25 +41,40 @@ new Vue({
 
     addThumbUp: function(i){
       this.posts[i].ups++;
+      console.log(i);
     },
 
     addThumbDown: function(i){
       this.posts[i].downs++;
+    },
+
+    tagClass(i){
+      // console.log(this.posts[i].tag);
+      if(this.posts[i].tag === 'breck'){
+        return 'breck';
+      } else if(this.posts[i].tag === 'abasin'){
+        return 'abasin';
+      } else if(this.posts[i].tag === 'copper'){
+        return 'copper';
+      } else if(this.posts[i].tag === 'vail'){
+        return 'vail';
+      } else if(this.posts[i].tag === 'eldora'){
+        return 'eldora';
+      } else if(this.posts[i].tag === 'aspen'){
+        return 'aspen';
+      } else if(this.posts[i].tag === 'psa'){
+        return 'psa';
+      }
     }
+
   },
 
   computed: {
-    revPosts(){
-      return this.posts.slice().reverse();
-    },
+    // revPosts(){
+    //   return this.posts.slice().reverse();
+    // },
 
-    filterPosts(){
 
-    },
-
-    tagClass: function(i){
-      // if(this.posts[i].tag == ''){}
-    }
   },
 
   watch: {
