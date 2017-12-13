@@ -18,7 +18,7 @@ new Vue({
 
   methods: {
 
-    submitPost: function(){
+    submitPost: function() {
       var p = new Object();
       p.content = this.newPostText;
       p.replies = [];
@@ -26,7 +26,7 @@ new Vue({
       p.downs = 0;
       p.date = new Date();
       p.tag = $('input[name="tagSelector"]:checked').val();
-      if(this.posts.length == 0){
+      if (this.posts.length == 0) {
         this.posts.push(p);
       } else {
         this.posts.unshift(p);
@@ -38,35 +38,35 @@ new Vue({
       // // post.content = p;
     },
 
-    addThumbUp: function(i){
+    addThumbUp: function(i) {
       this.posts[i].ups++;
     },
 
-    addThumbDown: function(i){
+    addThumbDown: function(i) {
       this.posts[i].downs++;
     }
   },
 
   computed: {
-    revPosts(){
+    revPosts() {
       return this.posts.slice().reverse();
     },
 
-    filterPosts(){
+    filterPosts() {
 
     }
   },
 
   watch: {
     posts: {
-      handler: function (val, oldVal) {
-      	console.log('a thing changed')
+      handler: function(val, oldVal) {
+        console.log('a thing changed')
       },
       deep: true
     }
   },
 
-  mounted: function(){
+  mounted: function() {
 
   }
 });
