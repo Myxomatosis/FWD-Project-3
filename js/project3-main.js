@@ -54,6 +54,10 @@ new Vue({
 
     filterPosts(){
 
+    },
+
+    tagClass: function(i){
+      if(this.posts[i].tag == '')
     }
   },
 
