@@ -44,12 +44,14 @@
         <section class="feed box">
           <h2 class="nudgeright">Recent Ski Reports</h2>
           <ul class="posts">
-            <li class='post box' v-for='post, i in posts' :class=''>
-              <p class="nudgeright">{{post.content}}</p>
-              <div class='thumbs nudgeright'>
-                <i class='fa fa-thumbs-o-up' @click='addThumbUp(i)'></i><p>{{post.ups}}</p>
-                <i class='fa fa-thumbs-o-down' @click='addThumbDown(i)'></i><p>{{post.downs}}</p>
-                <i class='fa fa-reply'></i>
+            <li class='post box' v-for='post, i in posts'>
+              <div :class='tagClass(i)'>
+                <p class="nudgeright">{{post.content}}</p>
+                <div class='thumbs nudgeright'>
+                  <i class='fa fa-thumbs-o-up' @click='addThumbUp(i)'></i><p>{{post.ups}}</p>
+                  <i class='fa fa-thumbs-o-down' @click='addThumbDown(i)'></i><p>{{post.downs}}</p>
+                  <i class='fa fa-reply'></i>
+                </div>
               </div>
 
             </li>
