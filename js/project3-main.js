@@ -25,7 +25,11 @@ new Vue({
       p.ups = 0;
       p.downs = 0;
       p.date = new Date();
-      this.posts.push(p);
+      if(this.posts.length == 0){
+        this.posts.push(p);
+      } else {
+        this.posts.unshift(p);
+      }
       this.newPostText = '';
       // var post = ;
       // post.content = this.newPostText;

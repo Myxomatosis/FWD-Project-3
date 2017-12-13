@@ -16,7 +16,6 @@
     <header class="heading">
       <h1>Ski Report</h1>
     </header>
-
     <!-- Vue Container -->
     <main id='app'>
       <!-- CONTAINER -->
@@ -33,23 +32,18 @@
         <section class="feed box">
           <h2 class="nudgeright">Recent Ski Reports</h2>
           <ul class="posts">
-            <li class='post box' v-for='post, i in revPosts'>
+            <li class='post box' v-for='post, i in posts'>
               <p class="nudgeright">{{post.content}}</p>
               <div class='thumbs'>
                 <i class='fa fa-thumbs-o-up' @click='addThumbUp(i)'>{{post.ups}}</i>
-                <i class='fa fa-thumbs-o-down'>{{post.downs}}</i>
+                <i class='fa fa-thumbs-o-down' @click='addThumbDown(i)'>{{post.downs}}</i>
               </div>
             </li>
           </ul>
         </section>
         <!-- REPLIES -->
-
       </div>
     </main>
-
-
-
-
 
     <script src='js/project3-main.js'></script>
   </body>
