@@ -57,7 +57,7 @@ new Vue({
     },
 
     tagClass: function(i){
-      if(this.posts[i].tag == ''){}
+      // if(this.posts[i].tag == ''){}
     }
   },
 

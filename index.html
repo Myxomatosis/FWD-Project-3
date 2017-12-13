@@ -22,13 +22,14 @@
       <!-- CONTAINER -->
       <div class='container'>
         <!-- MESSAGE BOX -->
-        <div class='compose center'>
+        <div class='compose box center'>
           <h2>What's going on?</h2>
           <div class='textboxContainer'>
             <textarea class='compose textbox' v-model='newPostText' placeholder="Type your post here..."></textarea>
             <div class='tags'>
               <form>
                 <input type='radio' name='tagSelector' value='breck'>Breck</input>
+                <input type='radio' name='tagSelector' value='eldora'>Eldora</input>
                 <input type='radio' name='tagSelector' value='copper'>Copper</input>
                 <input type='radio' name='tagSelector' value='abasin'>A Basin</input>
                 <input type='radio' name='tagSelector' value='keystone'>Keystone</input>
@@ -40,11 +41,10 @@
           <button @click='submitPost()'>Post!</button>
         </div>
         <!-- POSTED MESSAGES -->
-        <section class="feed">
+        <section class="feed box">
           <h2 class="nudgeright">Recent Ski Reports</h2>
           <ul class="posts">
-
-            <li class='post box' v-for='post, i in posts' :class='tagClass(i)'>
+            <li class='post box' v-for='post, i in posts' :class=''>
               <p class="nudgeright">{{post.content}}</p>
               <div class='thumbs nudgeright'>
                 <i class='fa fa-thumbs-o-up' @click='addThumbUp(i)'></i><p>{{post.ups}}</p>
