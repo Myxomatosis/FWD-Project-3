@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <title>Ski Patrol</title>
     <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='css/project3-style.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Righteous|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://unpkg.com/vue'></script>
   </head>
 
@@ -35,8 +35,8 @@
             <li class='post box' v-for='post, i in posts'>
               <p class="nudgeright">{{post.content}}</p>
               <div class='thumbs'>
-                <i class='fa fa-thumbs-o-up' @click='addThumbUp(i)'>{{post.ups}}</i>
-                <i class='fa fa-thumbs-o-down' @click='addThumbDown(i)'>{{post.downs}}</i>
+                <i class='fa fa-thumbs-o-up' @click='addThumbUp(i)'></i><p>{{post.ups}}</p>
+                <i class='fa fa-thumbs-o-down' @click='addThumbDown(i)'></i><p>{{post.downs}}</p>
               </div>
               <div class='replyButton'>
                 <i class='fa fa-reply'></i>
