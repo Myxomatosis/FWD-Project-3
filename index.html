@@ -8,6 +8,7 @@
     <link href='css/project3-style.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Righteous|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://unpkg.com/jquery'></script>
     <script src='https://unpkg.com/vue'></script>
   </head>
 
@@ -26,14 +27,14 @@
           <div class='textboxContainer'>
             <textarea class='compose textbox' v-model='newPostText' placeholder="Type your post here..."></textarea>
             <div class='tags'>
-              <ul>
-                <li>Breck</li>
-                <li>A Basin</li>
-                <li>Keystone</li>
-                <li>Copper</li>
-                <li>Vail</li>
-                <li>Aspen</li>
-              </ul>
+              <form>
+                <input type='radio' name='tagSelector' value='breck'>Breck</input>
+                <input type='radio' name='tagSelector' value='copper'>Copper</input>
+                <input type='radio' name='tagSelector' value='abasin'>A Basin</input>
+                <input type='radio' name='tagSelector' value='keystone'>Keystone</input>
+                <input type='radio' name='tagSelector' value='vail'>Vail</input>
+                <input type='radio' name='tagSelector' value='aspen'>Aspen</input>
+              </form>
             </div>
           </div>
           <button @click='submitPost()'>Post!</button>

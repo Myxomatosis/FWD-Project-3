@@ -25,6 +25,7 @@ new Vue({
       p.ups = 0;
       p.downs = 0;
       p.date = new Date();
+      p.tag = $('input[name="tagSelector"]:checked').val();
       if(this.posts.length == 0){
         this.posts.push(p);
       } else {
