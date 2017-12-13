@@ -7,10 +7,12 @@ rgb(133,15,214);
 rgb(91,18,247);
 rgb(58,106,232);
 rgb(77,173,255);
+rgb(0,247,255);
 rgb(58,198,232);
 rgb(0,244,159);
 rgb(233,181,80);
- whitesmoke;
+rgb(255,255,51);
+whitesmoke;
  font-family: 'Righteous', cursive;
  font-family: 'Roboto', sans-serif;
 */
@@ -60,7 +62,11 @@ button {
   border: none;
   border-radius: 8px;
 }
-
+form{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
 /* ---------------flags----------------------------^ */
 
 /* ---------------specifics----------------------------V */
@@ -74,9 +80,23 @@ button {
 }
 
 /* --------------specifics----------------------------^ */
+/*radio buttons */
+input[type="radio"] {
+	opacity: 0;
+	width: 0px;
+  height: 0px;
+  margin:0;
+  padding:0;
+}
 
+input[type=radio]:checked + label{
+font-size: 1.3em;
+}
 /* ---------------classes--------------------------V */
-
+.tags{
+height: 30px;
+margin: 10px;
+}
 .center {
   text-align: center;
 }
@@ -129,7 +149,8 @@ button {
   background-color: rgba(58, 106, 232, 0.25);
 }
 
-.abaisin {
+
+.abasin {
   border-left: 8px solid rgb(255, 20, 147);
   background-color: rgba(255, 20, 147, 0.25);
 }
@@ -148,6 +169,14 @@ button {
   border-left: 8px solid rgb(0, 244, 159);
   background-color: rgba(0, 244, 159, 0.25);
 }
+.aspen {
+  border-left: 8px solid rgb(255,255,51);
+  background-color: rgba(255,255,51, 0.25);
+}
+.keystone{
+  border-left: 8px solid rgb(0,247,255);
+  background-color: rgba(0,247,255, 0.25);
+}
 
 .psa {
   border-left: 8px solid rgb(247, 18, 74);
@@ -161,6 +190,44 @@ button {
 .boxright {
   width: 8%;
   height: 1000px;
+}
+
+
+
+.breckmark{
+  background-color: rgba(58, 106, 232, 0.25);
+  border-radius: 8px;
+  padding: 5px;
+}
+.abasinmark  {
+  background-color: rgba(255, 20, 147, 0.25);
+  border-radius: 8px;
+  padding: 5px;
+}
+.coppermark {
+  background-color: rgba(233, 181, 80, 0.25);
+  border-radius: 8px;
+  padding: 5px;
+}
+.vailmark{
+  background-color: rgba(209, 29, 237, 0.25);
+  border-radius: 8px;
+  padding: 5px;
+}
+.eldoramark {
+  background-color: rgba(0, 244, 159, 0.25);
+  border-radius: 8px;
+  padding: 5px;
+}
+.aspenmark {
+  background-color: rgba(255,255,51, 0.25);
+  border-radius: 8px;
+  padding: 5px;
+}
+.keystonemark{
+  background-color: rgba(0,247,255, 0.25);
+  border-radius: 8px;
+  padding: 5px;
 }
 
 /* //----------------------classes-------------------------^ */
