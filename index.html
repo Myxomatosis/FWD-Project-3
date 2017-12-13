@@ -1,67 +1,65 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="utf-8">
-  <title>Ski Patrol</title>
-  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-  <link href='css/project3-style.css' rel='stylesheet'>
-  <link href="https://fonts.googleapis.com/css?family=Righteous|Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src='https://unpkg.com/jquery'></script>
-  <script src='https://unpkg.com/vue'></script>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>Ski Patrol</title>
+    <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+    <link href='css/project3-style.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Righteous|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://unpkg.com/jquery'></script>
+    <script src='https://unpkg.com/vue'></script>
+  </head>
 
-<body>
+  <body>
 
-  <header class="heading">
-    <h1>Ski Report</h1>
-  </header>
-  <!-- Vue Container -->
-  <main id='app'>
-    <!-- CONTAINER -->
-    <div class='container'>
-      <!-- MESSAGE BOX -->
-      <div class='compose center'>
-        <h2>What's going on?</h2>
-        <div class='textboxContainer'>
-          <textarea class='compose textbox' v-model='newPostText' placeholder="Type your post here..."></textarea>
-          <div class='tags'>
-            <form>
-              <input type='radio' name='tagSelector' value='breck'>Breck</input>
-              <input type='radio' name='tagSelector' value='copper'>Copper</input>
-              <input type='radio' name='tagSelector' value='abasin'>A Basin</input>
-              <input type='radio' name='tagSelector' value='keystone'>Keystone</input>
-              <input type='radio' name='tagSelector' value='vail'>Vail</input>
-              <input type='radio' name='tagSelector' value='aspen'>Aspen</input>
-            </form>
+    <header class="heading">
+      <h1>Ski Report</h1>
+    </header>
+    <!-- Vue Container -->
+    <main id='app'>
+      <!-- CONTAINER -->
+      <div class='container'>
+        <!-- MESSAGE BOX -->
+        <div class='compose center'>
+          <h2>What's going on?</h2>
+          <div class='textboxContainer'>
+            <textarea class='compose textbox' v-model='newPostText' placeholder="Type your post here..."></textarea>
+            <div class='tags'>
+              <form>
+                <input type='radio' name='tagSelector' value='breck'>Breck</input>
+                <input type='radio' name='tagSelector' value='copper'>Copper</input>
+                <input type='radio' name='tagSelector' value='abasin'>A Basin</input>
+                <input type='radio' name='tagSelector' value='keystone'>Keystone</input>
+                <input type='radio' name='tagSelector' value='vail'>Vail</input>
+                <input type='radio' name='tagSelector' value='aspen'>Aspen</input>
+              </form>
+            </div>
           </div>
+          <button @click='submitPost()'>Post!</button>
         </div>
-        <button @click='submitPost()'>Post!</button>
-      </div>
-      <!-- POSTED MESSAGES -->
-      <section class="feed">
-        <h2 class="nudgeright">Recent Ski Reports</h2>
-        <ul class="posts">
-          <li class='post' v-for='post, i in posts'>
-            <p class="nudgeright">{{post.content}}</p>
-            <div class='thumbs nudgeright'>
-              <i class='fa fa-thumbs-o-up' @click='addThumbUp(i)'></i>
-              <p>{{post.ups}}</p>
-              <i class='fa fa-thumbs-o-down' @click='addThumbDown(i)'></i>
-              <p>{{post.downs}}</p>
-            </div>
-            <div class='replyButton'>
-              <i class='fa fa-reply'></i>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <!-- REPLIES -->
-    </div>
-  </main>
+        <!-- POSTED MESSAGES -->
+        <section class="feed">
+          <h2 class="nudgeright">Recent Ski Reports</h2>
+          <ul class="posts">
 
-  <script src='js/project3-main.js'></script>
-</body>
+            <li class='post box' v-for='post, i in posts' :class='tagClass(i)'>
+              <p class="nudgeright">{{post.content}}</p>
+              <div class='thumbs nudgeright'>
+                <i class='fa fa-thumbs-o-up' @click='addThumbUp(i)'></i><p>{{post.ups}}</p>
+                <i class='fa fa-thumbs-o-down' @click='addThumbDown(i)'></i><p>{{post.downs}}</p>
+                <i class='fa fa-reply'></i>
+              </div>
+
+            </li>
+          </ul>
+        </section>
+        <!-- REPLIES -->
+      </div>
+    </main>
+
+    <script src='js/project3-main.js'></script>
+  </body>
 
 </html>
