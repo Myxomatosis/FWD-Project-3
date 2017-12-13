@@ -51,7 +51,9 @@ li {
   display: inline;
 }
 
-
+.tags li {
+  display: inline-block;
+}
 
 
 
