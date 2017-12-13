@@ -44,7 +44,7 @@
           <h2 class="nudgeright">Recent Ski Reports</h2>
           <ul class="posts">
 
-            <li class='post box' v-for='post, i in posts' :class='tagClass(i)'>
+            <li class='post box' v-for='post, i in posts' :class='tagClass()'>
               <p class="nudgeright">{{post.content}}</p>
               <div class='thumbs nudgeright'>
                 <i class='fa fa-thumbs-o-up' @click='addThumbUp(i)'></i><p>{{post.ups}}</p>
