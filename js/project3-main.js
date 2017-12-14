@@ -1,11 +1,13 @@
 // console.log('yo');
 
-new Vue({
+var app = new Vue({
   el: '#app',
   data: {
     posts: [],
     newPostText: '',
-    selectedFilter: 'all'
+    newReplyText: '',
+    selectedFilter: 'all',
+    show: false
     // object
     // newPost
     // newPost: {
@@ -37,6 +39,16 @@ new Vue({
       // post.content = this.newPostText;
       // // var p = this.newPostText;
       // // post.content = p;
+    },
+
+    submitReply: function(post){
+      var r = this.newReplyText;
+      if(post.replies.length == 0){
+        post.replies.push(r);
+      } else {
+        post.replies.unshift(r);
+      }
+      this.newReplyText = '';
     },
 
     addThumbUp: function(i){

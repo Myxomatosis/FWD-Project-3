@@ -119,9 +119,15 @@ margin: 10px;
   border: 2px solid #eee;
 }
 
-.compose.textbox {
+.textbox {
   width: 98%;
   height: 6em;
+  /*margin-left: 2%;*/
+  /*margin-right: 2%;*/
+}
+.reply.textbox {
+  width: 98%;
+  height: 3em;
   /*margin-left: 2%;*/
   /*margin-right: 2%;*/
 }
