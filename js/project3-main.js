@@ -103,7 +103,11 @@ var app = new Vue({
   },
 
   computed: {
-
+    filterItems(){
+      return this.posts.filter(post => {
+        return this.selectedFilter == post.tag
+      })
+    }
   },
 
   watch: {
