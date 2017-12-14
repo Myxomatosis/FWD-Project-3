@@ -230,4 +230,10 @@ margin: 10px;
   padding: 5px;
 }
 
+.allmark{
+  background-color: rgba(163, 179, 180, 0.25);
+  border-radius: 8px;
+  padding: 5px;
+}
+
 /* //----------------------classes-------------------------^ */

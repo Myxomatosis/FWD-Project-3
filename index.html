@@ -43,6 +43,18 @@
         <!-- POSTED MESSAGES -->
         <section class="feed box">
           <h2 class="nudgeright">Recent Ski Reports</h2>
+          <div class='tags'>
+            <form>
+              <input type='radio' name='filterSelector' value='all' id='allF'><label for='allF' class='allmark'>All </label>
+              <input type='radio' name='filterSelector' value='breck' id='breckF'><label for='breckF' class='breckmark'>Breck </label>
+              <input type='radio' name='filterSelector' value='eldora' id='eldoraF'><label for='eldoraF' class='eldoramark'>Eldora</label>
+              <input type='radio' name='filterSelector' value='copper' id='copperF'><label for='copperF' class='coppermark'>Copper</label>
+              <input type='radio' name='filterSelector' value='abasin' id='abasinF'><label for='abasinF' class='abasinmark'>A Basin</label>
+              <input type='radio' name='filterSelector' value='keystone' id='keystoneF'><label for='keystoneF' class='keystonemark'>Keystone</label>
+              <input type='radio' name='filterSelector' value='vail' id='vailF'><label for='vailF' class='vailmark'>Vail</label>
+              <input type='radio' name='filterSelector' value='aspen' id='aspenF'><label for='aspenF' class='aspenmark'>Aspen</label>
+            </form>
+          </div>
           <ul class="posts">
 
             <li class='post box' v-for='post, i in posts'>
