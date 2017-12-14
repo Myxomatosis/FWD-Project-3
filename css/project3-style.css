@@ -311,7 +311,8 @@ margin: 10px;
 }
 .replies{
   display: flex;
-  flex-direction: column-reverse;
+  /* flex-direction: column-reverse; */
+  flex-direction: column;
 }
 
 .reply{
