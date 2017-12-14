@@ -77,7 +77,7 @@ var app = new Vue({
         return 'aspen';
       } else if(this.posts[i].tag === 'psa'){
         return 'psa';
-      } else if(this.posts[i].tag === 'all' || this.posts[i].tag === ''){
+      } else if(this.posts[i].tag === 'all' || this.posts[i].tag === '' || this.posts[i].tag == null){
         return 'all';
       } else if(this.posts[i].tag === 'keystone'){
         return 'keystone';
@@ -103,10 +103,6 @@ var app = new Vue({
   },
 
   computed: {
-    // revPosts(){
-    //   return this.posts.slice().reverse();
-    // },
-
 
   },
 
