@@ -243,3 +243,12 @@ margin: 10px;
 }
 
 /* //----------------------classes-------------------------^ */
+
+/* //----------------------transitions-------------------------v */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-to  {
+  opacity: 0
+}
+/* //----------------------transitions-------------------------^ */

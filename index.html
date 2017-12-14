@@ -66,10 +66,12 @@
                   <i class='fa fa-reply' @click='show = !show'></i>
                 </div>
                 <div class='replyArea nudgeright'>
-                  <div class='replyEntry'>
-                    <textarea class='reply textbox' v-model='newReplyText' placeholder="Type your reply here..."></textarea>
-                    <button class='replyButton'@click='submitReply(post)'>Post!</button>
-                  </div>
+                  <transition name='fade'>
+                    <div class='replyEntry' v-if='show'>
+                      <textarea class='reply textbox' v-model='newReplyText' placeholder="Type your reply here..."></textarea>
+                      <button class='replyButton'@click='submitReply(post)'>Post!</button>
+                    </div>
+                  </transition>
 
                   <ul class='replies' v-if='posts[i].replies.length != 0'>
                     <li class='reply' v-for='reply,  r in post.replies'>{{reply}}</li>
