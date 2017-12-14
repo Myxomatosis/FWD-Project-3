@@ -45,27 +45,27 @@
           <h2 class="nudgeright">Recent Ski Reports</h2>
           <div class='tags'>
             <form>
-              <input type='radio' name='filterSelector' value='all' id='allF'><label for='allF' class='allmark'>All </label>
-              <input type='radio' name='filterSelector' value='breck' id='breckF'><label for='breckF' class='breckmark'>Breck </label>
-              <input type='radio' name='filterSelector' value='eldora' id='eldoraF'><label for='eldoraF' class='eldoramark'>Eldora</label>
-              <input type='radio' name='filterSelector' value='copper' id='copperF'><label for='copperF' class='coppermark'>Copper</label>
-              <input type='radio' name='filterSelector' value='abasin' id='abasinF'><label for='abasinF' class='abasinmark'>A Basin</label>
-              <input type='radio' name='filterSelector' value='keystone' id='keystoneF'><label for='keystoneF' class='keystonemark'>Keystone</label>
-              <input type='radio' name='filterSelector' value='vail' id='vailF'><label for='vailF' class='vailmark'>Vail</label>
-              <input type='radio' name='filterSelector' value='aspen' id='aspenF'><label for='aspenF' class='aspenmark'>Aspen</label>
+              <input v-model='selectedFilter' type='radio' name='filterSelector' value='all' id='allF'><label for='allF' class='allmark'>All </label>
+              <input v-model='selectedFilter' type='radio' name='filterSelector' value='breck' id='breckF'><label for='breckF' class='breckmark'>Breck </label>
+              <input v-model='selectedFilter' type='radio' name='filterSelector' value='eldora' id='eldoraF'><label for='eldoraF' class='eldoramark'>Eldora</label>
+              <input v-model='selectedFilter' type='radio' name='filterSelector' value='copper' id='copperF'><label for='copperF' class='coppermark'>Copper</label>
+              <input v-model='selectedFilter' type='radio' name='filterSelector' value='abasin' id='abasinF'><label for='abasinF' class='abasinmark'>A Basin</label>
+              <input v-model='selectedFilter' type='radio' name='filterSelector' value='keystone' id='keystoneF'><label for='keystoneF' class='keystonemark'>Keystone</label>
+              <input v-model='selectedFilter' type='radio' name='filterSelector' value='vail' id='vailF'><label for='vailF' class='vailmark'>Vail</label>
+              <input v-model='selectedFilter' type='radio' name='filterSelector' value='aspen' id='aspenF'><label for='aspenF' class='aspenmark'>Aspen</label>
             </form>
           </div>
           <ul class="posts">
 
-            <li class='post box' v-for='post, i in posts'>
+            <li class='post' v-for='post, i in posts'>
               <div :class='tagClass(i)'>
                 <p class="nudgeright">{{post.content}}</p>
                 <div class='thumbs nudgeright'>
                   <i class='fa fa-thumbs-o-up' @click='addThumbUp(i)'></i><p>{{post.ups}}</p>
                   <i class='fa fa-thumbs-o-down' @click='addThumbDown(i)'></i><p>{{post.downs}}</p>
-                  <i class='fa fa-reply'></i>
+                  <i class='fa fa-reply' ></i>
                 </div>
-
+                
               </div>
 
             </li>

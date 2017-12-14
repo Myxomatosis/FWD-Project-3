@@ -5,7 +5,7 @@ new Vue({
   data: {
     posts: [],
     newPostText: '',
-
+    selectedFilter: 'all'
     // object
     // newPost
     // newPost: {
@@ -65,6 +65,22 @@ new Vue({
       } else if(this.posts[i].tag === 'psa'){
         return 'psa';
       }
+    },
+
+    whatFilter: function(){
+      this.selectedFilter = $('input[name="filterSelector"]:checked').val();
+      console.log(this.selectedFilter);
+    },
+
+    filterPosts: function(posts){
+      return posts.filter(function (post){
+        if(post.tag == this.selectedFilter || this.selectedFilter == 'all'){
+          console.log('FILTERING');
+          return true;
+        }
+      })
+
+
     }
 
   },
@@ -83,7 +99,14 @@ new Vue({
       	console.log('a thing changed')
       },
       deep: true
-    }
+    },
+    // selectedFilter: {
+    //   handler: function (val, oldVal) {
+    //   	console.log('a filter changed')
+    //   },
+    //   deep: true
+    // }
+
   },
 
   mounted: function(){
