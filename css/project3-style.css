@@ -150,11 +150,14 @@ margin: 10px;
   margin: 0 auto;
 }
 
+.postContent {
+  padding: 4px 0px 8px 0px;
+}
+
 .breck {
   border-left: 8px solid rgb(91, 18, 247);
   background-color: rgba(58, 106, 232, 0.25);
 }
-
 
 .abasin {
   border-left: 8px solid rgb(255, 20, 147);
@@ -187,6 +190,11 @@ margin: 10px;
 .psa {
   border-left: 8px solid rgb(247, 18, 74);
   background-color: rgba(247, 18, 74, 0.25);
+}
+
+.all {
+  border-left: 8px solid rgb(163, 179, 180);
+  background-color: rgba(163, 179, 180, 0.25);
 }
 
 .thumbs {
@@ -240,6 +248,39 @@ margin: 10px;
   background-color: rgba(163, 179, 180, 0.25);
   border-radius: 8px;
   padding: 5px;
+}
+
+.breck {
+  border-left: 8px solid rgb(91, 18, 247);
+  background-color: rgba(58, 106, 232, 0.25);
+}
+
+.abasin {
+  border-left: 8px solid rgb(255, 20, 147);
+  background-color: rgba(255, 20, 147, 0.25);
+}
+
+.copper {
+  border-left: 8px solid rgb(233, 181, 80);
+  background-color: rgba(233, 181, 80, 0.25);
+}
+
+.vail {
+  border-left: 8px solid rgb(209, 29, 237);
+  background-color: rgba(209, 29, 237, 0.25);
+}
+
+.eldora {
+  border-left: 8px solid rgb(0, 244, 159);
+  background-color: rgba(0, 244, 159, 0.25);
+}
+.aspen {
+  border-left: 8px solid rgb(255,255,51);
+  background-color: rgba(255,255,51, 0.25);
+}
+.keystone{
+  border-left: 8px solid rgb(0,247,255);
+  background-color: rgba(0,247,255, 0.25);
 }
 
 /* //----------------------classes-------------------------^ */
