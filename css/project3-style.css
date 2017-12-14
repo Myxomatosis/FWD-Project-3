@@ -1,14 +1,113 @@
+/*
+rgb(247,18,74);
+rgb(255,20,147);
+rgb(214,15,164);
+rgb(209,29,237);
+rgb(133,15,214);
+rgb(91,18,247);
+rgb(58,106,232);
+rgb(77,173,255);
+rgb(0,247,255);
+rgb(58,198,232);
+rgb(0,244,159);
+rgb(233,181,80);
+rgb(255,255,51);
+whitesmoke;
+ font-family: 'Righteous', cursive;
+ font-family: 'Roboto', sans-serif;
+*/
+
+/* ----------------flags---------------------------V */
+
 * {
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5,
-p {
-  font-family: 'Helvetica', Arial, sans-serif;
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: whitesmoke;
+}
+
+header {
+  /* padding: 0; */
+  font-family: 'Righteous', cursive;
+  font-size: 2em;
+  background-color: rgb(58, 198, 232);
+  border-top: 6px groove rgb(133, 15, 214);
+  border-bottom: 6px ridge rgb(133, 15, 214);
+  width: 100%;
+  color: rgb(247, 18, 74);
+}
+
+h1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h1, h2, h3, h4, h5, p {
+  /* font-family: 'Helvetica', Arial, sans-serif; */
 }
 
 li {
   list-style: none;
+}
+
+button {
+  font-size: 1em;
+  padding: 10px;
+  width: 10%;
+  background-color: rgb(133, 15, 214);
+  color: rgb(0, 244, 159);
+  border: none;
+  border-radius: 8px;
+}
+form{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+/* ---------------flags----------------------------^ */
+
+/* ---------------specifics----------------------------V */
+
+.thumbs p {
+  display: inline;
+}
+
+.tags li {
+  display: inline-block;
+}
+
+/* --------------specifics----------------------------^ */
+/*radio buttons */
+input[type="radio"] {
+	opacity: 0;
+	width: 0px;
+  height: 0px;
+  margin:0;
+  padding:0;
+}
+
+input[type=radio]:checked + label{
+font-size: 1.3em;
+}
+/* ---------------classes--------------------------V */
+.tags{
+height: 30px;
+margin: 10px;
+}
+.center {
+  text-align: center;
+}
+
+.heading {
+  text-align: center;
+}
+
+.nudgeright {
+  position: relative;
+  left: 20px;
 }
 
 .container {
@@ -20,11 +119,22 @@ li {
   border: 2px solid #eee;
 }
 
-.compose.textbox {
+.textbox {
   width: 98%;
   height: 6em;
   /*margin-left: 2%;*/
   /*margin-right: 2%;*/
+}
+.reply.textbox {
+  width: 98%;
+  height: 3em;
+  /*margin-left: 2%;*/
+  /*margin-right: 2%;*/
+}
+
+.feed {
+  background-color: snow;
+  /* height: 600px; */
 }
 
 .textboxContainer {
@@ -34,7 +144,111 @@ li {
 .posts {
   padding-left: 0;
 }
+
 .post {
   max-width: 98%;
   margin: 0 auto;
 }
+
+.breck {
+  border-left: 8px solid rgb(91, 18, 247);
+  background-color: rgba(58, 106, 232, 0.25);
+}
+
+
+.abasin {
+  border-left: 8px solid rgb(255, 20, 147);
+  background-color: rgba(255, 20, 147, 0.25);
+}
+
+.copper {
+  border-left: 8px solid rgb(233, 181, 80);
+  background-color: rgba(233, 181, 80, 0.25);
+}
+
+.vail {
+  border-left: 8px solid rgb(209, 29, 237);
+  background-color: rgba(209, 29, 237, 0.25);
+}
+
+.eldora {
+  border-left: 8px solid rgb(0, 244, 159);
+  background-color: rgba(0, 244, 159, 0.25);
+}
+.aspen {
+  border-left: 8px solid rgb(255,255,51);
+  background-color: rgba(255,255,51, 0.25);
+}
+.keystone{
+  border-left: 8px solid rgb(0,247,255);
+  background-color: rgba(0,247,255, 0.25);
+}
+
+.psa {
+  border-left: 8px solid rgb(247, 18, 74);
+  background-color: rgba(247, 18, 74, 0.25);
+}
+
+.thumbs {
+  /* text-align: center; */
+}
+
+.boxright {
+  width: 8%;
+  height: 1000px;
+}
+
+
+
+.breckmark{
+  background-color: rgba(58, 106, 232, 0.25);
+  border-radius: 8px;
+  padding: 5px;
+}
+.abasinmark  {
+  background-color: rgba(255, 20, 147, 0.25);
+  border-radius: 8px;
+  padding: 5px;
+}
+.coppermark {
+  background-color: rgba(233, 181, 80, 0.25);
+  border-radius: 8px;
+  padding: 5px;
+}
+.vailmark{
+  background-color: rgba(209, 29, 237, 0.25);
+  border-radius: 8px;
+  padding: 5px;
+}
+.eldoramark {
+  background-color: rgba(0, 244, 159, 0.25);
+  border-radius: 8px;
+  padding: 5px;
+}
+.aspenmark {
+  background-color: rgba(255,255,51, 0.25);
+  border-radius: 8px;
+  padding: 5px;
+}
+.keystonemark{
+  background-color: rgba(0,247,255, 0.25);
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.allmark{
+  background-color: rgba(163, 179, 180, 0.25);
+  border-radius: 8px;
+  padding: 5px;
+}
+
+/* //----------------------classes-------------------------^ */
+
+/* //----------------------transitions-------------------------v */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-to  {
+  opacity: 0
+}
+/* //----------------------transitions-------------------------^ */
