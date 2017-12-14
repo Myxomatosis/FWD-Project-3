@@ -62,11 +62,14 @@ button {
   border: none;
   border-radius: 8px;
 }
-form{
+
+form {
   display: flex;
   justify-content: space-around;
   width: 100%;
 }
+
+
 /* ---------------flags----------------------------^ */
 
 /* ---------------specifics----------------------------V */
@@ -92,11 +95,14 @@ input[type="radio"] {
 input[type=radio]:checked + label{
 font-size: 1.3em;
 }
+
 /* ---------------classes--------------------------V */
+
 .tags{
 height: 30px;
 margin: 10px;
 }
+
 .center {
   text-align: center;
 }
@@ -125,8 +131,9 @@ margin: 10px;
   /*margin-left: 2%;*/
   /*margin-right: 2%;*/
 }
+
 .reply.textbox {
-  width: 98%;
+  width: 97%;
   height: 3em;
   /*margin-left: 2%;*/
   /*margin-right: 2%;*/
@@ -178,10 +185,12 @@ margin: 10px;
   border-left: 8px solid rgb(0, 244, 159);
   background-color: rgba(0, 244, 159, 0.25);
 }
+
 .aspen {
   border-left: 8px solid rgb(255,255,51);
   background-color: rgba(255,255,51, 0.25);
 }
+
 .keystone{
   border-left: 8px solid rgb(0,247,255);
   background-color: rgba(0,247,255, 0.25);
@@ -213,31 +222,37 @@ margin: 10px;
   border-radius: 8px;
   padding: 5px;
 }
+
 .abasinmark  {
   background-color: rgba(255, 20, 147, 0.25);
   border-radius: 8px;
   padding: 5px;
 }
+
 .coppermark {
   background-color: rgba(233, 181, 80, 0.25);
   border-radius: 8px;
   padding: 5px;
 }
+
 .vailmark{
   background-color: rgba(209, 29, 237, 0.25);
   border-radius: 8px;
   padding: 5px;
 }
+
 .eldoramark {
   background-color: rgba(0, 244, 159, 0.25);
   border-radius: 8px;
   padding: 5px;
 }
+
 .aspenmark {
   background-color: rgba(255,255,51, 0.25);
   border-radius: 8px;
   padding: 5px;
 }
+
 .keystonemark{
   background-color: rgba(0,247,255, 0.25);
   border-radius: 8px;
@@ -274,15 +289,38 @@ margin: 10px;
   border-left: 8px solid rgb(0, 244, 159);
   background-color: rgba(0, 244, 159, 0.25);
 }
+
 .aspen {
   border-left: 8px solid rgb(255,255,51);
   background-color: rgba(255,255,51, 0.25);
 }
+
 .keystone{
   border-left: 8px solid rgb(0,247,255);
   background-color: rgba(0,247,255, 0.25);
 }
 
+.fa {
+  font-size: 1.2em;
+}
+
+.replyButton {
+  width: 8%;
+  padding: 6px;
+  font-size: .5em;
+}
+.replies{
+  display: flex;
+  /* flex-direction: column-reverse; */
+  flex-direction: column;
+}
+
+.reply{
+  border-left: 2px inset black;
+  margin: 5px;
+  padding-left: 10px;
+
+}
 /* //----------------------classes-------------------------^ */
 
 /* //----------------------transitions-------------------------v */
