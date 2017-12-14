@@ -309,6 +309,17 @@ margin: 10px;
   padding: 6px;
   font-size: .5em;
 }
+.replies{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.reply{
+  border-left: 2px inset black;
+  margin: 5px;
+  padding-left: 10px;
+
+}
 /* //----------------------classes-------------------------^ */
 
 /* //----------------------transitions-------------------------v */
