@@ -28,6 +28,7 @@
             <textarea class='compose textbox' v-model='newPostText' placeholder="Type your post here..."></textarea>
             <div class='tags'>
               <form>
+                <input type='radio' name='tagSelector' value='all' id='all'><label for='all' class='allmark'>All </label>
                 <input type='radio' name='tagSelector' value='breck' id='breck'><label for='breck' class='breckmark'>Breck </label>
                 <input type='radio' name='tagSelector' value='eldora' id='eldora'><label for='eldora' class='eldoramark'>Eldora</label>
                 <input type='radio' name='tagSelector' value='copper' id='copper'><label for='copper' class='coppermark'>Copper</label>
@@ -58,7 +59,7 @@
           <ul class="posts">
 
             <li class='post' v-for='post, i in posts'>
-              <div :class='tagClass(i)'>
+              <div class='postContent':class='tagClass(i)'>
                 <p class="nudgeright">{{post.content}}</p>
                 <div class='thumbs nudgeright'>
                   <i class='fa fa-thumbs-o-up' @click='addThumbUp(i)'></i><p>{{post.ups}}</p>
@@ -74,7 +75,7 @@
                   </transition>
 
                   <ul class='replies' v-if='posts[i].replies.length != 0'>
-                    <li class='reply' v-for='reply,  r in post.replies'>{{reply}}</li>
+                    <li class='reply' :class='' v-for='reply,  r in post.replies'>{{reply}}</li>
           </ul>
       </div>
       </div>
