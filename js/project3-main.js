@@ -49,6 +49,7 @@ var app = new Vue({
         post.replies.unshift(r);
       }
       this.newReplyText = '';
+      this.show = !this.show;
     },
 
     addThumbUp: function(i){
